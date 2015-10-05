@@ -1,2 +1,5 @@
 Mibicitubici/obj/
 Mibicitubici/Bin/
+packages/
+*.suo
+Mibicitubici/Toolkit.Content/
