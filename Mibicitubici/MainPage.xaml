@@ -1,0 +1,71 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Bike_Project.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Orange">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,0,0,28">
+            
+            <Image x:Name="logo" Source="/Assets/logo.png" Height="100" Width="100"/>
+
+            <Line StrokeThickness="1" Stroke="#434343" X1="0" X2="500"
+        Y1="13" Y2="13" VerticalAlignment="Top" Width="500" />
+
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,50,12,0">
+
+            <StackPanel x:Name="Login" Orientation="Vertical" Margin="12,0,12,0">
+
+                <TextBox Text="Documento" Background="White" VerticalAlignment="Top" Margin="0,15,0,0" HorizontalAlignment="Center" Width="360" />
+                <TextBox Text="Password" Background="White" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Center" Width="360" />
+
+                <StackPanel x:Name="Check" Orientation="Horizontal" Margin="12,0,12,0">
+                    
+                    <CheckBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,0,0,0" BorderThickness="3" RenderTransformOrigin="0.5,0.5" IsChecked="True" >
+                        <CheckBox.RenderTransform>
+                            <CompositeTransform ScaleX="1.2" ScaleY="1.2"/>
+                        </CheckBox.RenderTransform>
+                    </CheckBox>
+                    <TextBlock Text="Lembrar documento &#10;e senha" Foreground="Black" Width="165" FontSize="16" Margin="-17,12,0,0"/>
+                    <Button x:Name="Entrar" Content="Entrar" Background="#FF51B74F" Width="110" HorizontalAlignment="Right" Margin="30,0,0,0"/>
+                </StackPanel>
+
+                <Line StrokeThickness="1" Stroke="#434343" X1="0" X2="350"
+        Y1="13" Y2="13" HorizontalAlignment="Right" Width="391" />
+
+                <Button x:Name="Forget" Content="Esqueci a senha" Background="#FF51B74F" Width="410" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                <Button x:Name="Register" Content="Cadastre-se" Background="#FF51B74F" Width="410" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+
+            </StackPanel>
+
+        </Grid>
+
+        <!--Uncomment to see an alignment grid to help ensure your controls are
+            aligned on common boundaries.  The image has a top margin of -32px to
+            account for the System Tray. Set this to 0 (or remove the margin altogether)
+            if the System Tray is hidden.
+
+            Before shipping remove this XAML and the image itself.-->
+        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
+    </Grid>
+
+</phone:PhoneApplicationPage>

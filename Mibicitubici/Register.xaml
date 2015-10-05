@@ -1,0 +1,59 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Bike_Project.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Orange">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0">
+
+            <Image x:Name="logo" Source="/Assets/logo.png" Height="100" Width="100"/>
+
+            <Line StrokeThickness="1" Stroke="#434343" X1="0" X2="500"
+        Y1="13" Y2="13" VerticalAlignment="Top" Width="500" />
+
+            <StackPanel Background="#FFF6EDED" Height="50">
+                <TextBlock Text="Meu Perfil" Foreground="Gray" Width="165" FontSize="26" Margin="0,7,0,0" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            
+        </StackPanel>
+
+
+        <!--ContentPanel - place additional content here-->
+        <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="0">
+
+            <StackPanel Background="White" Margin="0" VerticalAlignment="Top" Height="520">
+
+                <TextBlock Text="WEB VIEW" Foreground="Gray" Width="165" FontSize="26" Margin="0,200,0,0" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Height="85">
+
+                <Image x:Name="img1" Source="/Assets/logo.png" Height="80" Width="120"/>
+                <Image x:Name="img2" Source="/Assets/logo.png" Height="80" Width="120"/>
+                <Image x:Name="img3" Source="/Assets/logo.png" Height="80" Width="120"/>
+                <Image x:Name="img4" Source="/Assets/logo.png" Height="80" Width="120"/>
+                
+            </StackPanel>
+             
+        </StackPanel>
+    </Grid>
+
+</phone:PhoneApplicationPage>
